@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chat{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+.chat-history{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.chat-form{
+  display: flex;
+  gap: 1rem;
+  width: 60%;
+}
+
+input{
+  padding: .5rem;
+  border: 1px solid rgb(60, 96, 216);
+  border-radius: 10px;
+  flex: 1;
+}
+
+button{
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  border: none;
+  background-color: rgb(60, 96, 216);
+  color: white;
+  transition: 0.2s, ease-in-out;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: rgb(30, 46, 104);
+  transform: scale(1.1) ;
+}
