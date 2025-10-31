@@ -31,12 +31,14 @@ const chain = RunnableSequence.from([
             const response = await llm.invoke(
                 await standAloneQuestionTemplate.format({ question })
             );
+            console.log(response)
             return response.content ?? response;
         })
     }),
 
     RunnableLambda.from(async ({ question, standAloneQuestion, chat_history }) => {
         const context = await retrieveDocuments.invoke(standAloneQuestion);
+        console.log(combineDocuments(context));
         return { question, context: combineDocuments(context), chat_history }
     }),
 
