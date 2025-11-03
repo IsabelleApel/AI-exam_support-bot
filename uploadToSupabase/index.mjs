@@ -11,9 +11,9 @@ const SUPABASE_API_KEY = process.env.SUPABASE_API_KEY;
 try {
     const text = await readFile(`${process.cwd()}/FAQ-Policy.txt`, "utf-8");
     const text_splitter = new RecursiveCharacterTextSplitter({
-        chunkSize: 500,
+        chunkSize: 800,
         separators: ["\n\n", "\n", " ", ""],
-        chunkOverlap: 50,
+        chunkOverlap: 100,
     });
 
     const splittedText = await text_splitter.createDocuments([text]);
